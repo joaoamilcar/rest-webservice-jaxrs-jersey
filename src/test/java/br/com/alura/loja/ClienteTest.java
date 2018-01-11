@@ -33,7 +33,7 @@ public class ClienteTest {
 	public void testaQueAConexaoComOServidorLocalFuncionaNoPathDeProjetos() {
 		Client cliente = ClientBuilder.newClient();
 		WebTarget target = cliente.target("http://localhost:8080"); // URI base de requisicoes
-		String conteudo = target.path("/projetos").request().get(String.class);
+		String conteudo = target.path("/projetos/1").request().get(String.class);
 		// System.out.println(conteudo);
 		Projeto projeto = (Projeto) new XStream().fromXML(conteudo);
 		Assert.assertEquals("Minha loja", projeto.getNome());
