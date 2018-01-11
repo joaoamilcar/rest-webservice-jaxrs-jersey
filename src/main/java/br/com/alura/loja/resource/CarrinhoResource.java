@@ -15,7 +15,7 @@ public class CarrinhoResource {
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public String busca(@QueryParam("id") long id) { // same URI identifying different resources. problems: contradicts the addressability concept from REST and, parameters cannot be cached.
-		Carrinho carrinho = new CarrinhoDAO().busca(1l);
+		Carrinho carrinho = new CarrinhoDAO().busca(id);
 		return carrinho.toXML();
 	}
 
