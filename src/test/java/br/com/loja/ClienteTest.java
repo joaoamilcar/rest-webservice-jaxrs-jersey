@@ -1,4 +1,4 @@
-package br.com.alura.loja;
+package br.com.loja;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
@@ -12,21 +12,21 @@ import org.junit.Test;
 
 import com.thoughtworks.xstream.XStream;
 
-import br.com.alura.loja.modelo.Projeto;
+import br.com.loja.model.Projeto;
 
 public class ClienteTest {
 	
-	private HttpServer server;
+private HttpServer server;
 	
-	@Before // run before each test
-	public void startServer() {
-		server = Servidor.initializeServer();
+	@Before // executa antes de cada teste
+	public void iniciaServidor() {
+		server = Servidor.inicializaServidor();
 	}
 	
-	@After // run after each test
-	public void killServer() {
-		server.stop();
-		System.out.println("Server stopped");
+	@After // executa apos cada teste
+	public void paraServidor() {
+		server.shutdown();
+		System.out.println("Server parou");
 	}
 	
 	@Test

@@ -1,8 +1,9 @@
-package br.com.alura.loja.modelo;
+package br.com.loja.model;
 
 import com.thoughtworks.xstream.XStream;
 
 public class Projeto {
+	
 	private long id;
 	private String nome;
 	private int anoDeInicio;
@@ -36,5 +37,5 @@ public class Projeto {
 	public String toXML() {
 		return new XStream().toXML(this);
 	}
-
+	
 }

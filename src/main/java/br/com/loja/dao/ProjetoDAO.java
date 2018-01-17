@@ -1,18 +1,19 @@
-package br.com.alura.loja.dao;
+package br.com.loja.dao;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
-import br.com.alura.loja.modelo.Projeto;
+import br.com.loja.model.Projeto;
 
 public class ProjetoDAO {
+
 	private static Map<Long, Projeto> banco = new HashMap<Long, Projeto>();
     private static AtomicLong contador = new AtomicLong(1);
     
     static {
         banco.put(1l, new Projeto(1l, "Minha loja", 2014));
-        banco.put(2l, new Projeto(2l, "Alura", 2012));
+        banco.put(2l, new Projeto(2l, "Loja", 2012));
     }
     
     public void adiciona(Projeto projeto) {
@@ -28,5 +29,5 @@ public class ProjetoDAO {
     public Projeto remove(long id) {
         return banco.remove(id);
     }
-
+    
 }

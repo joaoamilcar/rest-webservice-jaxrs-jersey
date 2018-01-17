@@ -1,2 +1,2 @@
-# rest-webservices-jaxrs-jersey
-REST webservices with JAX-RS and Jersey
+# rest-webservice-jaxrs-jersey
+REST webservice with JAX-RS and Jersey
