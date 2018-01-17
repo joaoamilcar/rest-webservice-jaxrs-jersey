@@ -28,16 +28,6 @@
 		    <scope>provided</scope>
 		</dependency>
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		<!-- https://jersey.github.io/documentation/latest/modules-and-dependencies.html#server-jdk -->
 		<!-- Server-side application on supported containers -->
 		<dependency>
