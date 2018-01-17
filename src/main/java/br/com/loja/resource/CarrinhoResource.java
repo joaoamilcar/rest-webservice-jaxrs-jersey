@@ -12,12 +12,20 @@ import br.com.loja.model.Carrinho;
 @Path("carrinhos")
 public class CarrinhoResource {
 
-	@Path("{id}")
+	/*@Path("{id}")
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public String busca(@PathParam("id") long id) {
 		Carrinho carrinho = new CarrinhoDAO().busca(id);
 		return carrinho.toXML();
+	}*/
+	
+	@Path("{id}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String busca(@PathParam("id") long id) {
+		Carrinho carrinho = new CarrinhoDAO().busca(id);
+		return carrinho.toJson();
 	}
 	
 }
