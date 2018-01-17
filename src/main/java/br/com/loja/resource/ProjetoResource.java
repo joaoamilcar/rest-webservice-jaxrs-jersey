@@ -12,12 +12,20 @@ import br.com.loja.model.Projeto;
 @Path("projetos")
 public class ProjetoResource {
 
-	@Path("{id}")
+	/*@Path("{id}")
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public String busca(@PathParam("id") long id) {
 		Projeto projeto = new ProjetoDAO().busca(id);
 		return projeto.toXML();
+	}*/
+	
+	@Path("{id}")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public String busca(@PathParam("id") long id) {
+		Projeto projeto = new ProjetoDAO().busca(id);
+		return projeto.toJson();
 	}
 	
 }
